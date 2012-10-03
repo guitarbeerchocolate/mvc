@@ -7,7 +7,16 @@ class home extends controller
 		parent::__construct();		
 		$help = $this->loadmodel('help');
 		$this->data = $help->getData().'<br />Data added by the controller.';
-		$this->view->render('home',$this->data);
+	}
+
+	function justthedata()
+	{
+		echo $this->data;
+	}
+
+	function loadviewwithdata()
+	{
+		$this->loadview('home',$this->data);
 	}
 
 	function __destruct()

@@ -6,6 +6,7 @@ class page extends html
 	function __construct($title = NULL)
 	{	
 		parent::__construct();
+		$this->config = (object) parse_ini_file('bootstrap/config.ini', true);		
 		include 'includes/pretitle.inc.php';
 		echo '<title>'.$title.'</title>';
 		include 'includes/meta.inc.php';

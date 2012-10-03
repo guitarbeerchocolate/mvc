@@ -4,8 +4,8 @@
 <script type="text/javascript">
 if (typeof jQuery == 'undefined')
 {
-    document.write(unescape("%3Cscript src='/js/jquery-1.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
-    document.write(unescape("%3Cscript src='/js/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='<?php echo $this->config->applicationpath; ?>js/jquery-1.7.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    document.write(unescape("%3Cscript src='<?php echo $this->config->applicationpath; ?>js/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));
 }
 </script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->config->applicationpath; ?>js/bootstrap.min.js"></script>

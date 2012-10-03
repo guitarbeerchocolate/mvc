@@ -1,9 +1,9 @@
 <?php
 class controller
 {
+	public $view;
 	function __construct()
 	{
-		$this->view = new view;
 		$this->model = new model;		
 	}
 
@@ -13,10 +13,10 @@ class controller
 		return new $model;
 	}
 
-	function loadview($view)
+	function loadview($view, $data = NULL)
 	{
-		require_once 'views/'.$view.'.class.php';
-		return new $view;
+		$this->view = new view;
+		$this->view->render($view,$data);		
 	}
 
 	function __destruct()

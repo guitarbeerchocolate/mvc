@@ -4,7 +4,7 @@ class jimmy extends controller
 	function __construct()
 	{
 		parent::__construct();		
-	}
+	}	
 
 	function gibbie($arg = FALSE)
 	{
